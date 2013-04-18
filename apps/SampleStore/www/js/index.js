@@ -37,6 +37,7 @@ var app = {
         //document.getElementById('Welcome').innerHTML = "Heloo from PhoneGap";
         // Run on page load
         updateWidthAndHeight();
+        setupActionSheet();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
