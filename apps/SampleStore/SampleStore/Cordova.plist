@@ -32,6 +32,8 @@
 	</array>
 	<key>Plugins</key>
 	<dict>
+		<key>CodeScan</key>
+		<string>CodeScanPlugin</string>
 		<key>ActionSheet</key>
 		<string>ActionSheet</string>
 		<key>Device</key>
