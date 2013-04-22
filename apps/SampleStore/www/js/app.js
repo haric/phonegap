@@ -12,7 +12,7 @@ function setupActionSheet(callback) {
     
     // Basic with title
     actionSheet.create({title: 'Menu', items: ['New releases', 'My Cart']}, callback);
-    window.plugins.CodeScan.scan();
+    //window.plugins.CodeScan.scan();
 
 }
 
