@@ -9,6 +9,9 @@
 #import "CodeScanPlugin.h"
 
 @implementation CodeScanPlugin
+{
+    NSString *result;
+}
 
 //Instance Method
 - (void) scan:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options; {
@@ -34,6 +37,19 @@
 
 }
 
+- (void)getResult:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* myarg = [command.arguments objectAtIndex:0];
+    
+    if (myarg != nil) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+    }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 #pragma mark -
 #pragma mark ZBarDelegate
 
@@ -49,7 +65,8 @@
         break;
     
     // EXAMPLE: do something useful with the barcode data
-    NSLog(@"%@", symbol.data);
+    result = symbol.data;
+    NSLog(@"%@", result);
     
     // EXAMPLE: do something useful with the barcode image
     //resultImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];

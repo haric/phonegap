@@ -15,4 +15,6 @@
 //Instance Method
 - (void) scan:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
+- (void)getResult:(CDVInvokedUrlCommand*)command;
+
 @end
