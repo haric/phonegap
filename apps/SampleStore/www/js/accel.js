@@ -2,6 +2,11 @@ var watchId;
 var startWatchButton = document.getElementById("startWatch");
 var accelerationPlaceHolder = document.getElementById("accelReading");
 
+// Capture original position of the ball
+var ball = document.getElementById("ball");
+var X = ball.offsetLeft;
+var Y = ball.offetTop;
+
 //
 function onSuccess(acceleration) {
     var element = document.getElementById('accelReading');
@@ -9,6 +14,9 @@ function onSuccess(acceleration) {
     'Acceleration Y: ' + acceleration.y + '<br />' +
     'Acceleration Z: ' + acceleration.z + '<br />' +
     'Timestamp: '      + acceleration.timestamp + '<br />';
+    
+    var leftStyle = "left: " + (X + X*acceleration.x) + "px";
+    ball.style.cssText = leftStyle;
 }
 
 // onError: Failed to get the acceleration
