@@ -14,8 +14,8 @@ function onCSuccess(heading) {
     element.innerHTML = 'Heading: ' + heading.magneticHeading;
     var dx = 0, dy = 0;
     if ( (heading.magneticHeading > 0) && (heading.magneticHeading < 90) ) dx = 10;
-    else ( (heading.magneticHeading > 90) && (heading.magneticHeading < 180) ) dy = 10;
-    else ( (heading.magneticHeading > 180) && (heading.magneticHeading < 270) ) dx = -10;
+    else if ( (heading.magneticHeading > 90) && (heading.magneticHeading < 180) ) dy = 10;
+    else if ( (heading.magneticHeading > 180) && (heading.magneticHeading < 270) ) dx = -10;
     else dy = -10;
     
     X = Math.abs(X + dx);
