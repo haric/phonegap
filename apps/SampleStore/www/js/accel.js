@@ -35,8 +35,8 @@ startWatchButton.addEventListener("click", function() {
 });
 
 stopWatchButton.addEventListener("click", function() {
-                                 if (watchID) {
-                                 navigator.accelerometer.clearWatch(watchID);
-                                 watchID = null;
+                                 if (watchId) {
+                                 navigator.accelerometer.clearWatch(watchId);
+                                 watchId = null;
                                  }
                                   });

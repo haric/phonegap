@@ -53,7 +53,8 @@
                 </tr>
                 </table>
             <!-- store markup ends here -->
-                <a id="menubutton" href="#accelpage" data-role="button">Extended Menu</a>
+                <a id="menubutton" href="#accelpage" data-role="button">Try Accelerometer</a>
+                <a id="menubutton" href="#headingpage" data-role="button">Try Compass</a>
             </div>
             
             <footer id='footer' data-role="footer" data-position="fixed">
@@ -88,10 +89,32 @@
             </footer>
             
         </div>
-        
+
+        <div id="headingpage" data-role="page" data-add-back-btn="true">
+            <header data-role="header">
+                <h1>Compass test</h1>
+            </header>
+            <div data-role="content">
+                <!-- Put store landing page markup here -->
+                <div id="headingObj"> Current compass Reading </div>
+                <div id="headingReading">Waiting for compass...</div>
+                
+                <a id="startCWatch" data-role="button">Start Watch</a>
+                <a id="stopCWatch" data-role="button">Stop Watch</a>
+                
+                <div id="ballC"></div>
+                
+            </div>
+            
+            <footer id='footer' data-role="footer" data-position="fixed">
+            </footer>
+            
+        </div>
+
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/accel.js"></script>
+         <script type="text/javascript" src="js/compass.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/appdb.js"></script>
         <script type="text/javascript" src="js/plugins/ActionSheet.js"></script>
