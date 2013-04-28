@@ -67,6 +67,7 @@
     // EXAMPLE: do something useful with the barcode data
     result = symbol.data;
     NSLog(@"%@", result);
+    NSString *jsFunc = [NSString stringWithFormat:@"scanResult('%@')", result];
     
     // EXAMPLE: do something useful with the barcode image
     //resultImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
@@ -75,6 +76,8 @@
     [reader dismissViewControllerAnimated:YES completion:^{
         NSLog(@"reader Dismissed");
     }];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:jsFunc];
 }
 
 
