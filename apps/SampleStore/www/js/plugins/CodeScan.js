@@ -27,6 +27,11 @@
  return cordova.exec(_callback, _callback, 'CodeScan', 'scan', [config]);
  };
  
+ CodeScan.prototype.result = function(callback) {
+ cordova.exec(callback, function(err) {
+              callback('Nothing to echo.');
+              }, "CodeScan", "getResult", []);
+ };
  cordova.addConstructor(function() {
                         if(!window.plugins) window.plugins = {};
                         window.plugins.CodeScan = new CodeScan();

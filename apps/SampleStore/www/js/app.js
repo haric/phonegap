@@ -12,7 +12,7 @@ function setupActionSheet(callback) {
     
     // Basic with title
     //if (actionSheet) actionSheet.create({title: 'Menu', items: ['New releases', 'My Cart']}, callback);
-    //window.plugins.CodeScan.scan();
+
 
 }
 
@@ -39,7 +39,12 @@ function onFail(message) {
     alert('Failed because: ' + message);
 }
 
+function scanResult(result) {
+    alert(result);
+}
+
 var cameraButton = document.getElementById("CameraButton");
 if (cameraButton) cameraButton.addEventListener('click', function(e) {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI});
+    //navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI});
+    window.plugins.CodeScan.scan();
 });
