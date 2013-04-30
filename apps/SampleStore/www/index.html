@@ -55,6 +55,7 @@
             <!-- store markup ends here -->
                 <a id="menubutton" href="#accelpage" data-role="button">Try Accelerometer</a>
                 <a id="menubutton" href="#headingpage" data-role="button">Try Compass</a>
+                <a id="menubutton" href="#searchpage" data-role="button">Search Bar</a>
                 <a id="CameraButton" data-role="button">Scan</a>
             </div>
             
@@ -111,6 +112,26 @@
             </footer>
             
         </div>
+        
+        <div id="searchpage" data-role="page" data-add-back-btn="true">
+            <header data-role="header">
+                <h1>Search Page</h1>
+            </header>
+            <div data-role="content">
+            Bar name: <input id="bname" type="text" name="bname">
+            <button onclick="SearchDB.init()">Search Bar</button>
+            </div>
+            <div id=output> </div>
+            
+            
+            
+            <footer data-role="footer" data-position="fixed">
+            </footer>
+            
+        </div>
+
+        
+        
 
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
@@ -118,11 +139,27 @@
          <script type="text/javascript" src="js/compassTest.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/appdb.js"></script>
+<<<<<<< HEAD
         <script type="text/javascript" src="js/readJson.js"></script>
+=======
+        <script type="text/javascript" src="js/searchdb.js"></script>
+        <script type="text/javascript" src="js/readjson.js"></script>
+>>>>>>> Added index.html & saerchdb.js
         <script type="text/javascript" src="js/plugins/ActionSheet.js"></script>
         <script type="text/javascript" src="js/plugins/CodeScan.js"></script>
         <script type="text/javascript">
             app.initialize();
+            
+            var data = SearchDB.data;
+           
+            
+            for(var i=0; i<data.length; i++){
+                data[i].bar;
+                document.getElementById('output').append(data[i].bar);
+                                
+            }
+                      
+            
         </script>
     </body>
 </html>
