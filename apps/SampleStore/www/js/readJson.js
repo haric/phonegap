@@ -13,8 +13,8 @@ setup: function(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS trivialoc(bar, street, city, state, zip, phone, day, time, company, latitude, longitude)');
     
     // Loop through triviaAVE.data and insert for each object (row)
-   for (var i = 0; i < 10; i++) {
-    tx.executeSql('INSERT INTO trivialoc (bar, street, city, state, zip, phone, day, time, company, latitude, longitude) VALUES (? , ? )');
+   for (var i = 0; i < triviaAVE.data.length; i++) {
+       tx.executeSql('INSERT INTO trivialoc(bar, street, city, state, zip, phone, day, time, company, latitude, longitude) VALUES (?, ?, ? , ? , ? ,?, ? , ? ,? , ? ,?)', [triviaAVE.data[i].Bar, triviaAVE.data[i].Street, triviaAVE.data[i].City, triviaAVE.data[i].State, triviaAVE.data[i].Zip, triviaAVE.data[i].Phone, triviaAVE.data[i].Day, triviaAVE.data[i].Time, triviaAVE.data[i].Company, triviaAVE.data[i].Latitude, triviaAVE.data[i].Longitude]);
    }
     
     var sql = 'SELECT * FROM trivialoc';
