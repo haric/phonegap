@@ -25,7 +25,7 @@
         <link rel="stylesheet" type="text/css" href="../css/index.css" />
         <link rel="stylesheet" type="text/css" href="../css/app.css" />
         <link rel="stylesheet" href="../lib/jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/books.css" />
+        <link rel="stylesheet" type="text/css" href="../css/details.css" />
         <script src="../lib/jquery.mobile-1.3.0/jquery-1.8.2.min.js"></script>
         <script src="../lib/jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
         <title>Books</title>
@@ -34,54 +34,26 @@
 
         <div data-role="page">
             <div data-role="header">
-                <a href="../index.html" rel='external'>Home</a>
-                <h1>Super Store</h1>
+                <a href="../index.html">Home</a>
+                <h1>Trivia Venues</h1>
             </div>
             <div data-role="content">
-                <h2>Books</h2>
-                <p>This is the books store.  We have plenty of them for sale.  Best prices and great deals !!</p>
-                <p>&nbsp;</p>
-                <img id="banner" src="../img/books.jpg" />
-                <ul data-role="listview">
-                    <li><a href="#new">New arrivals</a></li>
-                    <li><a href="#deal">Today's deal'</a></li>
-                    <li><a href="#search">Search</a></li>
-                </ul>
+                <h2 id="bar">Bar</h2>
+                <p id="street">Street Address</p>
+                <p id="city">City</p>
+                <p id="state">State</p>
+                <p id="zip">Zip Code</p>
+                <p id="day">Day</p>
+                <p id="time">Time</p>
+                <p id="company">Company</p>
             </div>
-            <div data-role="footer">
-                <h3 id='widthDiv'></h3>
-                <h3 id='heightDiv'></h3>
-            </div>
-        </div>
-        <div id="new" data-role="page" data-add-back-btn="true">
-        <div data-role="header">
-            <h1>Super Store: Books</h1>
         </div>
         <div data-role="content">
-            <h2>New arrivals</h2>
-            <div id="output"></div>
-            <!--
-            <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
-                <div data-role="collapsible">
-                    <h3>Section 1</h3>
-                    <p><img class="bookcover" src="../img/book1.jpg"/>The hottest collection of studs in romance” (New York Times bestseller Angela Knight) returns as #1 New York Times bestselling author J. R. Ward brings together two of the most beloved people in the Black Dagger Brotherhood world—at last...
-                    . Qhuinn, son of no one, is used to being on his own. Disavowed from his bloodline, shunned by the aristocracy</p>
-                </div>
-                <div data-role="collapsible">
-                    <h3>Section 2</h3>
-                    <p>I'm the collapsible content for section 2</p>
-                </div>
-                <div data-role="collapsible">
-                    <h3>Section 3</h3>
-                    <p>I'm the collapsible content for section 3</p>
-                </div>
-            </div>
-             -->
-        </div>
         <div data-role="footer">
         </div>
         </div>
         <script type="text/javascript" src="../cordova-2.2.0.js"></script>
+        <script type="text/javascript" src="../js/details.js"></script>
         <script type="text/javascript" src="../js/app.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
         <script type="text/javascript" src="../js/appdb.js"></script>

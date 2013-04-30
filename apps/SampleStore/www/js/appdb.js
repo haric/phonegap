@@ -25,7 +25,7 @@ populate: function() {
 },
 search: function(tx, results) {
     var data = [];
-    // Return all books
+    // Returna all books
     var rowcount = results.rows.length;
     for (var i = 0; i < rowcount; i++) {
         var record = {};
