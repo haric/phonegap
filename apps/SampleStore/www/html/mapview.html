@@ -35,29 +35,28 @@
         <div data-role="page">
             <div data-role="header">
                 <a href="../index.html">Home</a>
-                <h1>Trivia Venues</h1>
-                
+                <h1>Map</h1>
             </div>
             <div data-role="content">
-                <h2 id="bar">Bar</h2>
-                <p id="street">Street Address</p>
-                <p id="city">City</p>
-                <p id="state">State</p>
-                <p id="zip">Zip Code</p>
-                <p id="day">Day</p>
-                <p id="time">Time</p>
-                <p id="company">Company</p>
+                <div id="map" style="height: 300px">Display Map view</div>
             </div>
-        </div>
-        <div data-role="content">
-        <div data-role="footer">
-        </div>
-        </div>
+
+        
+        <footer id='footer' data-role="footer">
+            <img src='img/amex.jpeg' /> <img src='img/master.jpeg' /><img src='img/visa.jpeg' />
+            <h5 id='widthDiv'></h5>
+            <h5 id='heightDiv'></h5>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </footer>
+                    </div>
         <script type="text/javascript" src="../cordova-2.2.0.js"></script>
-        <script type="text/javascript" src="../js/details.js"></script>
         <script type="text/javascript" src="../js/app.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
-        <script type="text/javascript" src="../js/appdb.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script type="text/javascript" src="../js/maps.js"></script>
         <script type="text/javascript">
             app.initialize();
             
@@ -94,6 +93,9 @@
                          outdiv.appendTo('#output');
                          }
                          $('#output [data-role=collapsible-set]').collapsibleset();
+                         
+  
+
             });
         </script>
     </body>
