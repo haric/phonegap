@@ -13,8 +13,44 @@ function onSuccess(position) {
     };
     map = new google.maps.Map(mapDiv,
                               mapOptions);
+    google.maps.event.addListener(map, 'click', function(e) {
+        placeMarker(e.latLng, map);
+                        
+    });
     
     
+}
+
+var pathConnected = [];
+var p;
+
+function placeMarker(position, map) {
+    if (p) p.setMap(null);
+    
+    var populationOptions = {
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
+    map: map,
+    center: position,
+    radius: 5000
+    };
+    c = new google.maps.Circle(populationOptions);
+    pathConnected.push(position);
+    
+    p = new google.maps.Polygon({
+                                     paths: pathConnected,
+                                    strokeColor: '#FF0000',
+                                    strokeOpacity: 0.8,
+                                    strokeWeight: 3,
+                                    fillColor: '#FF0000',
+                                    fillOpacity: 0.35
+    });
+    
+    p.setMap(map);
+
 }
 
 // onError Callback receives a PositionError object
